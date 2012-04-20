@@ -41,7 +41,7 @@ namespace LinkedINSharp
 			             	};
 
 			// create the request
-			var requestTokenRequest = new RestRequest( "token" );
+			var requestTokenRequest = new RestRequest( "requestToken" );
 
 			// execute the request
 			var requestTokenResponse = ExecuteRequest( client, requestTokenRequest );
@@ -64,10 +64,10 @@ namespace LinkedINSharp
 		/// </remarks>
 		/// <param name="requestUri">The <see cref="Uri"/> of the request </param>
 		/// <param name="requestToken">The request secret, gained when the call to <see cref="RequestAuthorizationToken"/> was made.</param>
-		/// <param name="token">The <see cref="AccessToken"/>.</param>
+		/// <returns>The <see cref="AccessToken"/>.</returns>
 		/// <exception cref="ArgumentNullException">Thrown when <paramref name="requestUri"/> or <paramref name="requestToken"/> is null.</exception>
 		/// <exception cref="LinkedINHttpResponseException">Thrown when LinkedIN did not respond properly while requesting the access token.</exception>
-		public void ExchangeCodeForAccessToken( Uri requestUri, RequestToken requestToken, out AccessToken token )
+		public AccessToken ExchangeCodeForAccessToken( Uri requestUri, RequestToken requestToken )
 		{
 			// validate arguments
 			if ( requestUri == null )
@@ -92,14 +92,14 @@ namespace LinkedINSharp
 			             	};
 
 			// create the request
-			var requestAccessTokenRequest = new RestRequest( "token" );
+			var requestAccessTokenRequest = new RestRequest( "accessToken" );
 
 			// execute the request
 			var requestActionTokenResponse = ExecuteRequest( client, requestAccessTokenRequest );
 
 			// extract the token and secret from the response query string
 			var requestActionTokenResponseParameters = HttpUtility.ParseQueryString( requestActionTokenResponse.Content );
-			token = new AccessToken( requestActionTokenResponseParameters[ "oauth_token" ], requestActionTokenResponseParameters[ "oauth_token_secret" ] );
+			return new AccessToken( requestActionTokenResponseParameters[ "oauth_token" ], requestActionTokenResponseParameters[ "oauth_token_secret" ] );
 		}
 		#endregion
 	}
