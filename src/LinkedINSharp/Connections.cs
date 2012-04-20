@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using LinkedINSharp.Model;
 using LinkedINSharp.Model.People;
 using RestSharp;
@@ -22,7 +23,7 @@ namespace LinkedINSharp
 		/// <exception cref="ArgumentNullException">Thrown when <paramref name="fields"/> is null.</exception>
 		/// <exception cref="LinkedINHttpResponseException">Thrown when the an unexepcted response was returned from LinkedIN.</exception>
 		/// <exception cref="LinkedINUnauthorizedException">Thrown when an request was made to an protected resource without the proper authorization.</exception>
-		public Connections RetrieveCurrentMemberConnections( ProfileField[] fields, int start = 0, int count = 500 )
+		public Connections RetrieveCurrentMemberConnections( IEnumerable< ProfileField > fields, int start = 0, int count = 500 )
 		{
 			// validate arguments
 			if ( fields == null )
@@ -42,7 +43,7 @@ namespace LinkedINSharp
 		/// <exception cref="ArgumentNullException">Thrown when either <paramref name="id"/> or <paramref name="fields"/> is null.</exception>
 		/// <exception cref="LinkedINHttpResponseException">Thrown when the an unexepcted response was returned from LinkedIN.</exception>
 		/// <exception cref="LinkedINUnauthorizedException">Thrown when an request was made to an protected resource without the proper authorization.</exception>
-		public Connections RetrieveMemberConnections( string id, ProfileField[] fields, int start = 0, int count = 500 )
+		public Connections RetrieveMemberConnections( string id, IEnumerable< ProfileField > fields, int start = 0, int count = 500 )
 		{
 			// validate arguments
 			if ( string.IsNullOrEmpty( id ) )
@@ -64,7 +65,7 @@ namespace LinkedINSharp
 		/// <exception cref="ArgumentNullException">Thrown when <paramref name="idPart"/> or <paramref name="fields"/> is null.</exception>
 		/// <exception cref="LinkedINHttpResponseException">Thrown when the an unexepcted response was returned from LinkedIN.</exception>
 		/// <exception cref="LinkedINUnauthorizedException">Thrown when an request was made to an protected resource without the proper authorization.</exception>
-		protected Connections RetrieveConnections( string idPart, ProfileField[] fields, int start, int count )
+		protected Connections RetrieveConnections( string idPart, IEnumerable< ProfileField > fields, int start, int count )
 		{
 			// validate arguments
 			if ( string.IsNullOrEmpty( idPart ) )

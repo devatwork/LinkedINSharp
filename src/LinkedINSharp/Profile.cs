@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using LinkedINSharp.Model;
 using LinkedINSharp.Model.People;
 using RestSharp;
@@ -20,7 +21,7 @@ namespace LinkedINSharp
 		/// /// <exception cref="ArgumentNullException">Thrown when <paramref name="fields"/> is null.</exception>
 		/// <exception cref="LinkedINHttpResponseException">Thrown when the an unexepcted response was returned from LinkedIN.</exception>
 		/// <exception cref="LinkedINUnauthorizedException">Thrown when an request was made to an protected resource without the proper authorization.</exception>
-		public Person RetrieveCurrentMemberProfile( ProfileField[] fields )
+		public Person RetrieveCurrentMemberProfile( IEnumerable< ProfileField > fields )
 		{
 			return RetrieveProfileById( "~", fields );
 		}
@@ -33,13 +34,13 @@ namespace LinkedINSharp
 		/// <exception cref="ArgumentNullException">Thrown when <paramref name="id"/> or <paramref name="fields"/> is null.</exception>
 		/// <exception cref="LinkedINHttpResponseException">Thrown when the an unexepcted response was returned from LinkedIN.</exception>
 		/// <exception cref="LinkedINUnauthorizedException">Thrown when an request was made to an protected resource without the proper authorization.</exception>
-		public Person RetrieveMemberProfileById( string id, ProfileField[] fields )
+		public Person RetrieveMemberProfileById( string id, IEnumerable< ProfileField > fields )
 		{
 			// validate arguments
-			if ( string.IsNullOrEmpty( "idPart" ) )
+			if ( string.IsNullOrEmpty( id ) )
 				throw new ArgumentNullException( "id" );
 
-			return RetrieveProfileById( "idPart=" + id, fields );
+			return RetrieveProfileById( "id=" + id, fields );
 		}
 		/// <summary>
 		/// Retrieves an <see cref="Person"/> by it's <paramref name="idPart"/>.
@@ -50,10 +51,10 @@ namespace LinkedINSharp
 		/// <exception cref="ArgumentNullException">Thrown when <paramref name="idPart"/> or <paramref name="fields"/> is null.</exception>
 		/// <exception cref="LinkedINHttpResponseException">Thrown when the an unexepcted response was returned from LinkedIN.</exception>
 		/// <exception cref="LinkedINUnauthorizedException">Thrown when an request was made to an protected resource without the proper authorization.</exception>
-		protected Person RetrieveProfileById( string idPart, ProfileField[] fields )
+		protected Person RetrieveProfileById( string idPart, IEnumerable< ProfileField > fields )
 		{
 			// validate arguments
-			if ( string.IsNullOrEmpty( "idPart" ) )
+			if ( string.IsNullOrEmpty( idPart ) )
 				throw new ArgumentNullException( "idPart" );
 			if ( fields == null )
 				throw new ArgumentNullException( "fields" );

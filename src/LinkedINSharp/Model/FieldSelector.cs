@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using LinkedINSharp.Model.People;
 
@@ -33,15 +34,16 @@ namespace LinkedINSharp.Model
 		/// <param name="fields">The <see cref="ProfileField"/>s.</param>
 		/// <returns>Returns the formatted field selector.</returns>
 		/// <exception cref="ArgumentNullException">Thrown when <paramref name="fields"/> is null.</exception>
-		public static string ToFieldSelector( FieldSelector[] fields )
+		public static string ToFieldSelector( IEnumerable< FieldSelector > fields )
 		{
 			// validate argumetns
 			if ( fields == null )
 				throw new ArgumentNullException( "fields" );
-			if ( fields.Length < 1 )
+			var fieldArray = fields.ToArray();
+			if ( fieldArray.Length < 1 )
 				return string.Empty;
 
-			return ":(" + string.Join( ",", fields.Select( field => field.fieldName ) ) + ")";
+			return ":(" + string.Join( ",", fieldArray.Select( field => field.fieldName ) ) + ")";
 		}
 		#endregion
 		#region Overrides of Object
