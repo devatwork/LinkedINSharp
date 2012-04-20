@@ -45,17 +45,64 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LinkedINUnauthorizedException.cs" />
+    <Compile Include="Model\FieldSelector.cs" />
     <Compile Include="Model\OAuth\AccessToken.cs" />
     <Compile Include="LinkedINHttpResponseException.cs" />
     <Compile Include="LinkedINException.cs" />
     <Compile Include="LinkedINRestClient.cs" />
+    <Compile Include="Model\People\BoundAccountType.cs" />
+    <Compile Include="Model\People\Certification.cs" />
+    <Compile Include="Model\People\CertificationAuthority.cs" />
+    <Compile Include="Model\People\Company.cs" />
+    <Compile Include="Model\People\CompanyType.cs" />
+    <Compile Include="Model\People\Connections.cs" />
+    <Compile Include="Model\People\Country.cs" />
+    <Compile Include="Model\People\Course.cs" />
+    <Compile Include="Model\Date.cs" />
+    <Compile Include="Model\People\Education.cs" />
+    <Compile Include="Model\People\GroupMembership.cs" />
+    <Compile Include="Model\People\IMAccount.cs" />
+    <Compile Include="Model\People\Inventor.cs" />
+    <Compile Include="Model\People\JobBookmark.cs" />
+    <Compile Include="Model\People\Language.cs" />
+    <Compile Include="Model\People\LanguageName.cs" />
+    <Compile Include="Model\People\LanguageProficiency.cs" />
+    <Compile Include="Model\People\Location.cs" />
+    <Compile Include="Model\People\MemberUrlResource.cs" />
+    <Compile Include="Model\PagedCollection.cs" />
+    <Compile Include="Model\People\Patent.cs" />
+    <Compile Include="Model\People\PatentOffice.cs" />
+    <Compile Include="Model\People\PatentStatus.cs" />
+    <Compile Include="Model\People\Person.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\People\Position.cs" />
+    <Compile Include="Model\People\ProfileField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\People\Publication.cs" />
+    <Compile Include="Model\People\PublicationAuthor.cs" />
+    <Compile Include="Model\People\Publisher.cs" />
+    <Compile Include="Model\People\Recommendation.cs" />
+    <Compile Include="Model\People\Skill.cs" />
+    <Compile Include="Model\People\SkillName.cs" />
+    <Compile Include="Model\People\SkillProficiency.cs" />
+    <Compile Include="Model\People\SkillYears.cs" />
+    <Compile Include="Model\People\Suggestion.cs" />
+    <Compile Include="Model\People\TelephoneNumber.cs" />
+    <Compile Include="Model\People\TwitterAccount.cs" />
+    <Compile Include="Model\People\Volunteer.cs" />
     <Compile Include="OAuth.cs" />
     <Compile Include="Model\OAuth\OAuthToken.cs" />
+    <Compile Include="Profile.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\OAuth\RequestToken.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Model\OAuth\OAuth.cd" />
+    <None Include="Model\People\People.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

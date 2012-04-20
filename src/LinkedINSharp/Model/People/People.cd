@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinkedINSharp.Model.People.Person">
+    <Position X="9.5" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>FAyCIUQAGAAwACE0OAKAYKAJAAgaIgJAQBBBAPQIIRg=</HashCode>
+      <FileName>Model\People\Person.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Location" />
+      <Property Name="Connections" />
+      <Property Name="PrimaryTwitterAccount" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Positions" />
+      <Property Name="Publications" />
+      <Property Name="Patents" />
+      <Property Name="Languages" />
+      <Property Name="Skills" />
+      <Property Name="Certifications" />
+      <Property Name="Educations" />
+      <Property Name="Courses" />
+      <Property Name="Volunteers" />
+      <Property Name="ThreeCurrentPositions" />
+      <Property Name="ThreePastPositions" />
+      <Property Name="RecommendationsReceived" />
+      <Property Name="PhoneNumbers" />
+      <Property Name="IMAccounts" />
+      <Property Name="TwitterAccounts" />
+      <Property Name="BoundAccountTypes" />
+      <Property Name="Following" />
+      <Property Name="JobBookmarks" />
+      <Property Name="GroupMemberships" />
+      <Property Name="Suggestions" />
+      <Property Name="MemberUrlResources" />
+      <Property Name="RelatedProfileViews" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Volunteer">
+    <Position X="6.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Model\People\Volunteer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.BoundAccountType" Collapsed="true">
+    <Position X="13.5" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAIBAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Model\People\BoundAccountType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Certification">
+    <Position X="15.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAEAAAAQgABAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Model\People\Certification.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Authority" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.CertificationAuthority">
+    <Position X="18.5" Y="15.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\CertificationAuthority.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Company">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAECAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Model\People\Company.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.CompanyType">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\CompanyType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Connections">
+    <Position X="12.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Model\People\Connections.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Persons" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Country">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Course">
+    <Position X="12.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Education">
+    <Position X="15.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAiAAAAAAAAAIAAAAAAAAAwAAAAAAAAAAAAAMAAAAA=</HashCode>
+      <FileName>Model\People\Education.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.GroupMembership">
+    <Position X="6.5" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\GroupMembership.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.IMAccount">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\IMAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Inventor">
+    <Position X="12.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\Inventor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Person" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.JobBookmark">
+    <Position X="6.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\JobBookmark.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Language">
+    <Position X="9.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\Language.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Name" />
+      <Property Name="Proficiency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.LanguageName">
+    <Position X="6.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\LanguageName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.LanguageProficiency">
+    <Position X="9.5" Y="20.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\LanguageProficiency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Location">
+    <Position X="12.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\Location.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Country" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.MemberUrlResource">
+    <Position X="6.5" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\MemberUrlResource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Patent">
+    <Position X="16.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAEAAAAAEAAAEAAIAAAAAAAAAABCAAAAgAAAAA=</HashCode>
+      <FileName>Model\People\Patent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+      <Property Name="Office" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Inventors" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.PatentOffice">
+    <Position X="16.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\PatentOffice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.PatentStatus">
+    <Position X="17.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\PatentStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Position">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAAQEAAAAAAAAAgAAAAAAAAAAAABEAAAAA=</HashCode>
+      <FileName>Model\People\Position.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Company" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Publication">
+    <Position X="4.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAAAEAACAAAAAAAAABAAAABCAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\Publication.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Publisher" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Authors" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.PublicationAuthor">
+    <Position X="9.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\PublicationAuthor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Person" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Publisher">
+    <Position X="1.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\Publisher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Recommendation">
+    <Position X="9.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Model\People\Recommendation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Recommender" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Skill">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAIAQAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\Skill.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Name" />
+      <Property Name="Proficiency" />
+      <Property Name="Years" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.SkillName">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\SkillName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.SkillProficiency">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\SkillProficiency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.SkillYears">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\SkillYears.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.Suggestion">
+    <Position X="13.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\Suggestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.TelephoneNumber">
+    <Position X="6.5" Y="14.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\TelephoneNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedINSharp.Model.People.TwitterAccount">
+    <Position X="13.25" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\People\TwitterAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
