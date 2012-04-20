@@ -19,7 +19,7 @@ namespace LinkedINSharp
 		#endregion
 		#region Methods
 		/// <summary>
-		/// 
+		/// Requests authorization of your application by first sending the RequestToken request and then generate an LinkedIN URL to which users can be redirected. This is the first stage of OAuth.
 		/// </summary>
 		/// <param name="callbackUri">The <see cref="Uri"/> to which the user is redirected when returning from the LinkedIN authorization screen.</param>
 		/// <param name="requestTokenSecret">The secret of the request token. Keep this somewhere safely stored with the user's session. You will need the provide this later in method TODO.</param>
