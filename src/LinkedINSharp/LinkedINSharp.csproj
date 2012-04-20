@@ -44,6 +44,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connections.cs" />
     <Compile Include="LinkedINUnauthorizedException.cs" />
     <Compile Include="Model\FieldSelector.cs" />
     <Compile Include="Model\OAuth\AccessToken.cs" />
