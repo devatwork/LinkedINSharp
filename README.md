@@ -13,13 +13,28 @@ The LinkedIN C# SDK currently provides an implemenation of the following APIs of
 * [Profile API](https://developer.linkedin.com/documents/profile-api)
 * [Connections API](https://developer.linkedin.com/documents/connections-api)
 
+## Sample
+
+The sample code belows shows how to create a client and retrieve the member profile of the authorized user.
+
+```csharp
+// construct an access token, usally retrieved from OAuth authorization
+var accessToken = new AccessToken( "MY_ACCESS_TOKEN", "MY_ACCESS_SECRET" );
+
+// create the client
+var client = new LinkedINRestClient("CONSUMER_KEY", "CONSUMER_SECRET", accessToken);
+
+// retrieve the profile
+var profile = client.RetrieveCurrentMemberProfile(ProfileField.NameOnly);
+```
+
 ## Documentation
 
-Nothing here yet, we are working on documentation at the moment.
+Nothing here yet, we are working on the documentation at the moment. Please visit our [Github Wiki](https://github.com/trilobyte/LinkedINSharp/wiki) for the most up-to-date documentation.
 
 ## Help and Support
 
-Create an issue right here on Github if you encounter a problem with the SDK.
+Create an issue on our [Github project page](https://github.com/trilobyte/LinkedINSharp/issues) if you encounter a problem with the SDK.
 
 ## Help out
 
