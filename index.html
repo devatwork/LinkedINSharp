@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="LinkedINSharp : C#/.NET SDK for LinkedIN" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>LinkedINSharp</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/trilobyte/LinkedINSharp">Fork Me on GitHub</a>
+
+          <h1 id="project_title">LinkedINSharp</h1>
+          <h2 id="project_tagline">C#/.NET SDK for LinkedIN</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/trilobyte/LinkedINSharp/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/trilobyte/LinkedINSharp/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>LinkedINSharp</h1>
+
+<p>LinkedINSharp is .NET SDK for <a href="http://www.linkedin.com/">LinkedIN</a>. Its goals is to help .NET developers build web applications that integrate with LinkedIN.</p>
+
+<h2>Features</h2>
+
+<p>The LinkedIN C# SDK currently provides an implemenation of the following APIs offered by LinkedIN:</p>
+
+<ul>
+<li><a href="https://developer.linkedin.com/documents/authentication">OAuth authorization</a></li>
+<li><a href="https://developer.linkedin.com/documents/profile-api">Profile API</a></li>
+<li><a href="https://developer.linkedin.com/documents/connections-api">Connections API</a></li>
+</ul><h2>Work in progress</h2>
+
+<p>This library is still in development, please have a little patience. As soon as we have a stable version we will distribute it via Nuget.</p>
+
+<h2>Sample</h2>
+
+<p>The sample code belows shows how to create a client and retrieve the member profile of the authorized user.</p>
+
+<div class="highlight">
+<pre><span class="c1">// construct an access token, usally retrieved from OAuth authorization</span>
+<span class="kt">var</span> <span class="n">accessToken</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AccessToken</span><span class="p">(</span> <span class="s">"MY_ACCESS_TOKEN"</span><span class="p">,</span> <span class="s">"MY_ACCESS_SECRET"</span> <span class="p">);</span>
+
+<span class="c1">// create the client</span>
+<span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LinkedINRestClient</span><span class="p">(</span><span class="s">"CONSUMER_KEY"</span><span class="p">,</span> <span class="s">"CONSUMER_SECRET"</span><span class="p">,</span> <span class="n">accessToken</span><span class="p">);</span>
+
+<span class="c1">// retrieve the profile</span>
+<span class="kt">var</span> <span class="n">profile</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">RetrieveCurrentMemberProfile</span><span class="p">(</span><span class="n">ProfileField</span><span class="p">.</span><span class="n">NameOnly</span><span class="p">);</span>
+</pre>
+</div>
+
+
+<p>Note: The sample below will not work because of a bug in <a href="https://github.com/restsharp/RestSharp">RestSharp</a>, see pull-request <a href="https://github.com/restsharp/RestSharp/pull/250">Fix for #231 Support for LinkedIn Field-Selector Notation</a> for details. To make this SDK work use my fork <a href="https://github.com/trilobyte/RestSharp">https://github.com/trilobyte/RestSharp</a>.</p>
+
+<h2>Documentation</h2>
+
+<p>Nothing here yet, we are working on the documentation at the moment. Please visit our <a href="https://github.com/trilobyte/LinkedINSharp/wiki">Github Wiki</a> for the most up-to-date documentation.</p>
+
+<h2>Help and Support</h2>
+
+<p>Create an issue on our <a href="https://github.com/trilobyte/LinkedINSharp/issues">Github project page</a> if you encounter a problem with the SDK.</p>
+
+<h2>Help out</h2>
+
+<p>There are many ways you can contribute to this project. Like most open-source software projects, contributing code is just one of many outlets where you can help improve. Some of the things that you could help out with in this project are:</p>
+
+<ul>
+<li>Documentation (both code and features)</li>
+<li>Bug reports</li>
+<li>Bug fixes</li>
+<li>Feature requests</li>
+<li>Feature implementations</li>
+<li>Test coverage</li>
+<li>Code quality</li>
+<li>Sample applications</li>
+</ul><h2>Copyright</h2>
+
+<p>Copyright © 2012 Bert Willems and contributors</p>
+
+<h2>License</h2>
+
+<p>This project is licensed under <a href="http://www.opensource.org/licenses/mit-license.php" title="Read more about the MIT license form">MIT</a>. Refer to license.txt for more information.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">LinkedINSharp maintained by <a href="https://github.com/trilobyte">trilobyte</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
