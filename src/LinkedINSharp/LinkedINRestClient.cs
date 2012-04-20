@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using LinkedINSharp.Model.OAuth;
 using RestSharp;
 
 namespace LinkedINSharp
@@ -33,20 +34,16 @@ namespace LinkedINSharp
 		/// </summary>
 		/// <param name="consumerKey">The key of the consumer.</param>
 		/// <param name="consumerSecret">The consumer secret.</param>
-		/// <param name="accessToken">The access token of the currently authenticated user.</param>
-		/// <param name="accessSecret">The access secret of the currently authenticated user.</param>
-		/// <exception cref="ArgumentNullException">Thrown when either <paramref name="consumerKey"/>, <paramref name="consumerSecret"/>, <paramref name="accessToken"/> or <paramref name="accessSecret"/> is null or empty.</exception>
-		public LinkedINRestClient( string consumerKey, string consumerSecret, string accessToken, string accessSecret ) : this( consumerKey, consumerSecret )
+		/// <param name="accessToken">The <see cref="AccessToken"/> of the currently authenticated user.</param>
+		/// <exception cref="ArgumentNullException">Thrown when either <paramref name="consumerKey"/>, <paramref name="consumerSecret"/> or <paramref name="accessToken"/> is null or empty.</exception>
+		public LinkedINRestClient( string consumerKey, string consumerSecret, AccessToken accessToken ) : this( consumerKey, consumerSecret )
 		{
 			// validate arguments
-			if ( string.IsNullOrEmpty( accessToken ) )
+			if ( accessToken == null )
 				throw new ArgumentNullException( "accessToken" );
-			if ( string.IsNullOrEmpty( accessSecret ) )
-				throw new ArgumentNullException( "accessSecret" );
 
 			// set values
 			this.accessToken = accessToken;
-			this.accessSecret = accessSecret;
 		}
 		#endregion
 		#region ExecuteRequest Mehtods
@@ -79,8 +76,7 @@ namespace LinkedINSharp
 		}
 		#endregion
 		#region Private Fields
-		private readonly string accessSecret;
-		private readonly string accessToken;
+		private readonly AccessToken accessToken;
 		private readonly string consumerKey;
 		private readonly string consumerSecret;
 		#endregion
