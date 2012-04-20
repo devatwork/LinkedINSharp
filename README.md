@@ -1,9 +1,7 @@
 LinkedINSharp
 =============
 
-LinkedINSharp is .NET SDK for [LinkedIN](http://www.linkedin.com/). Its goals is to help .NET developers build web applications that integrate with LinkedIN. 
-
-Note: this library is still in development, please have a little patience. As soon as we have a stable version we will distribute it via Nuget.
+LinkedINSharp is .NET SDK for [LinkedIN](http://www.linkedin.com/). Its goals is to help .NET developers build web applications that integrate with LinkedIN.
 
 ## Features
 
@@ -12,6 +10,10 @@ The LinkedIN C# SDK currently provides an implemenation of the following APIs of
 * [OAuth authorization](https://developer.linkedin.com/documents/authentication)
 * [Profile API](https://developer.linkedin.com/documents/profile-api)
 * [Connections API](https://developer.linkedin.com/documents/connections-api)
+
+## Work in progress
+
+This library is still in development, please have a little patience. As soon as we have a stable version we will distribute it via Nuget.
 
 ## Sample
 
@@ -27,6 +29,8 @@ var client = new LinkedINRestClient("CONSUMER_KEY", "CONSUMER_SECRET", accessTok
 // retrieve the profile
 var profile = client.RetrieveCurrentMemberProfile(ProfileField.NameOnly);
 ```
+
+Note: The sample below will not work because of a bug in [RestSharp](https://github.com/restsharp/RestSharp), see pull-request [Fix for #231 Support for LinkedIn Field-Selector Notation](https://github.com/restsharp/RestSharp/pull/250) for details. To make this SDK work use my fork [https://github.com/trilobyte/RestSharp](https://github.com/trilobyte/RestSharp).
 
 ## Documentation
 
