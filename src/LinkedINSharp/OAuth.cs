@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net;
 using RestSharp;
 using RestSharp.Authenticators;
 using RestSharp.Contrib;
@@ -19,6 +18,14 @@ namespace LinkedINSharp
 		private const string BaseUrl = "https://api.linkedin.com/uas/oauth";
 		#endregion
 		#region Methods
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="callbackUri">The <see cref="Uri"/> to which the user is redirected when returning from the LinkedIN authorization screen.</param>
+		/// <param name="requestTokenSecret">The secret of the request token. Keep this somewhere safely stored with the user's session. You will need the provide this later in method TODO.</param>
+		/// <returns>Returns the LinkedIN authorization <see cref="Uri"/> to which users must be redirected in order give access to your application.</returns>
+		/// <exception cref="ArgumentNullException">Thrown whe <paramref name="callbackUri"/> is null.</exception>
+		/// <exception cref="LinkedINHttpResponseException">Thrown when LinkedIN did not respond properly while requesting the request token.</exception>
 		public Uri RequestAuthorizationToken( Uri callbackUri, out string requestTokenSecret )
 		{
 			// validate arguments
@@ -36,12 +43,7 @@ namespace LinkedINSharp
 			var request = new RestRequest( "requestToken" );
 
 			// execute the request
-			var response = client.Execute( request );
-
-			// make sure the request succeeded
-			// TODO: add better error handling
-			if ( response.StatusCode != HttpStatusCode.OK )
-				throw new InvalidOperationException( "Could not make requestToken request succesfully" );
+			var response = ExecuteRequest( client, request );
 
 			// extract the token from the query string
 			var queryString = HttpUtility.ParseQueryString( response.Content );
