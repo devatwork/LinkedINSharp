@@ -5,7 +5,7 @@ namespace LinkedINSharp
 	/// <summary>
 	/// REST client for the LinkedIN API.
 	/// </summary>
-	public class LinkedINRestClient
+	public partial class LinkedINRestClient
 	{
 		#region Constructors
 		/// <summary>
