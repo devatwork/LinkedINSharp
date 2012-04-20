@@ -16,7 +16,7 @@ namespace LinkedINSharp
 		/// <summary>
 		/// Defines the base URL for all the OAuth
 		/// </summary>
-		private const string BaseUrl = "https://api.linkedin.com/uas/oauth";
+		private const string OAuthBaseUrl = "https://api.linkedin.com/uas/oauth";
 		#endregion
 		#region OAuth Methods
 		/// <summary>
@@ -36,7 +36,7 @@ namespace LinkedINSharp
 			// create the client
 			var client = new RestClient
 			             	{
-			             		BaseUrl = BaseUrl,
+			             		BaseUrl = OAuthBaseUrl,
 			             		Authenticator = OAuth1Authenticator.ForRequestToken( consumerKey, consumerSecret, callbackUri.ToString() )
 			             	};
 
@@ -87,7 +87,7 @@ namespace LinkedINSharp
 			// create the client
 			var client = new RestClient
 			             	{
-			             		BaseUrl = BaseUrl,
+			             		BaseUrl = OAuthBaseUrl,
 			             		Authenticator = OAuth1Authenticator.ForAccessToken( consumerKey, consumerSecret, requestToken.Token, requestToken.Secret, requestVerifier )
 			             	};
 
