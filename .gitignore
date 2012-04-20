@@ -1,6 +1,20 @@
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
-obj
-
-# mstest test results
-TestResults
+*.[Cc]ache
+*.csproj.user
+*.[Rr]e[Ss]harper*
+*.sln.cache
+*.suo
+*.user
+*.orig
+*.pidb
+*.userprefs
+.DS_Store
+deploy/
+build/
+[Bb]in/
+[Dd]ebug/
+[Oo]bj/
+[Rr]elease/
+_[Rr]e[Ss]harper.*/
+*.docstates
+*.tss
+packages/
