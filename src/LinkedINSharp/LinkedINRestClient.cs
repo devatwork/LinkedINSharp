@@ -63,6 +63,7 @@ namespace LinkedINSharp
 		/// <returns>Returns the resulting <see cref="IRestResponse"/>.</returns>
 		/// <exception cref="ArgumentNullException">Thrown when <paramref name="client"/> or <paramref name="request"/> is null.</exception>
 		/// <exception cref="LinkedINHttpResponseException">Thrown when the actual response code did not match the <paramref name="expectedStatusCode"/>.</exception>
+		/// <exception cref="LinkedINUnauthorizedException">Thrown when an request was made to an protected resource without the proper authorization.</exception>
 		protected IRestResponse ExecuteRequest( IRestClient client, IRestRequest request, HttpStatusCode expectedStatusCode = HttpStatusCode.OK )
 		{
 			// validate arguments
@@ -89,11 +90,16 @@ namespace LinkedINSharp
 		/// <returns>Returns the mapped <typeparamref name="TModel"/>.</returns>
 		/// <exception cref="ArgumentNullException">Thrown when <paramref name="request"/> is null.</exception>
 		/// <exception cref="LinkedINHttpResponseException">Thrown when the actual response code did not match the <paramref name="expectedStatusCode"/>.</exception>
+		/// <exception cref="LinkedINUnauthorizedException">Thrown when an request was made to an protected resource without the proper authorization.</exception>
 		protected TModel ExecuteRequest< TModel >( IRestRequest request, HttpStatusCode expectedStatusCode = HttpStatusCode.OK ) where TModel : new()
 		{
 			// validate arguments
 			if ( request == null )
 				throw new ArgumentNullException( "request" );
+
+			// make sure an token is set
+			if ( accessToken == null )
+				throw new LinkedINUnauthorizedException();
 
 			// create the client
 			var client = new RestClient
@@ -122,6 +128,10 @@ namespace LinkedINSharp
 			// validate arguments
 			if ( response == null )
 				throw new ArgumentNullException( "response" );
+
+			// check if the user was not authorized to make the request
+			if ( response.StatusCode == HttpStatusCode.Unauthorized && expectedStatusCode != HttpStatusCode.Unauthorized )
+				throw new LinkedINUnauthorizedException();
 
 			// check if the actuel status code is not the expected status code
 			if ( response.StatusCode != expectedStatusCode )
