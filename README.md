@@ -34,7 +34,7 @@ Note: The sample below will not work because of a bug in [RestSharp](https://git
 
 ## Documentation
 
-Nothing here yet, we are working on the documentation at the moment. Please visit our [Github Wiki](https://github.com/trilobyte/LinkedINSharp/wiki) for the most up-to-date documentation.
+Please visit our [Github Wiki](https://github.com/trilobyte/LinkedINSharp/wiki) for the most up-to-date documentation.
 
 ## Help and Support
 
