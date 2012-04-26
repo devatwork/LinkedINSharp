@@ -1,0 +1,9 @@
+﻿@model LinkedINSharp.Model.People.Person
+
+@{
+	ViewBag.Title = "Login";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome, @Model.FirstName @Model.LastName!</h2>
+@Html.ActionLink("Logout", "Logout")
