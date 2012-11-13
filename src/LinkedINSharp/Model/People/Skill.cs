@@ -3,7 +3,7 @@ namespace LinkedINSharp.Model.People
 	/// <summary>
 	/// A skill held by a member.
 	/// </summary>
-	public class Skill
+	public class SkillItem
 	{
 		#region Properties
 		/// <summary>
@@ -13,7 +13,7 @@ namespace LinkedINSharp.Model.People
 		/// <summary>
 		/// A structured object that indicates the internationalized name of the canonical language
 		/// </summary>
-		public SkillName Name { get; set; }
+		public SkillName Skill { get; set; }
 		/// <summary>
 		/// A structured object indicating the user's skill level
 		/// </summary>
