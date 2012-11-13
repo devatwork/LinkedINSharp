@@ -178,9 +178,9 @@ namespace LinkedINSharp.Model.People
 		/// </summary>
 		public Collection< Language > Languages { get; set; }
 		/// <summary>
-		/// A collection of <see cref="Skill"/>s and the level of the member's proficiency for each.
+		/// A collection of <see cref="SkillItem"/>s and the level of the member's proficiency for each.
 		/// </summary>
-		public Collection< Skill > Skills { get; set; }
+		public Collection< SkillItem > Skills { get; set; }
 		/// <summary>
 		/// A collection of <see cref="Certification"/>s earned by this member.
 		/// </summary>
